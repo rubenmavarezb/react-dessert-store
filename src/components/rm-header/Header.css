@@ -1,0 +1,98 @@
+@import '../../assets/global.css';
+
+/* Hero */
+
+.main{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.tone-1{
+    background-color: var(--color1);
+    height: 100vh;
+    flex: 1;
+}
+.tone-2{
+    background-color: var(--color2);
+    height: 100vh;
+    flex: 1;
+    position: relative;
+    
+}
+.tone-2 img{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 25rem;
+    transform: translateY(-45%);
+}
+.product-info{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product-info h1{
+    color: var(--color2);
+    font-size: 5rem;
+    letter-spacing: .2rem;
+    margin-right: -3px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 9rem;
+}
+.product-info p{
+    color: var(--color3);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+}
+.product-info h2{
+    font-family: 'Yellowtail', cursive;
+    letter-spacing: .2rem;
+    filter: invert(50%);
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+.btn{
+    display: flex;
+    padding: 2rem;
+    color: #f7f7f6;
+    font-size: 1.5rem;
+    font-weight: 900;
+    transition: all .5s;
+}
+.info-btns{
+    display: flex;
+}
+.discover-btn{
+    color: var(--color1);
+    font-weight: 500;
+    background-color: var(--color2);
+    border-top-left-radius: 1rem;
+}
+.search-btn{
+    background-color: var(--color3);
+    border-bottom-right-radius: 1rem;
+}
+.discover-btn:hover,
+.search-btn:hover{
+    box-shadow: 3px 1rem 2rem rgba(255,255,255,.3);
+    transform: translateY(-1rem);
+}
+.discover-btn:hover{
+    color: var(--color3);
+}
+.search-btn:hover{
+    color: var(--color2);
+}
+
+/* End hero */
