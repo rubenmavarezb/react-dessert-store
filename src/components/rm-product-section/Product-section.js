@@ -12,13 +12,14 @@ const getPromise = (data) => {
     })
 }
 
-function Products() {
 
+function Products() {
     const [loading, setLoading] = useState(true);
     const [sourceData, setSourceData] = useState([]);
 
     useEffect(() => {
         getPromise( dataJson ).then(result => {
+            console.log(result)
             setSourceData(result);
             setLoading(false)
         });
@@ -29,7 +30,15 @@ function Products() {
             <div>
                 <div className="columns is-multiline is-centered" id="products">
                     { loading && <Spinner/> }
-                    { !loading &&  <EachProduct sourceData={sourceData}/> }
+                    { !loading && (
+                        sourceData.map((data, i) => (
+                            <EachProduct
+                                key={i + data.id}
+                                data={data}
+                            />
+                        ))
+                    )}
+
                 </div>
             </div>
         </section>
